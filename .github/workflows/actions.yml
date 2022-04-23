@@ -1,6 +1,6 @@
 name: PMD Source Code Analyzer on Push
 
-on: [pull_request]
+on: [push]
 
 jobs:
   pmd:
@@ -8,13 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Setup JRE
-        uses: actions/setup-java@v1
-        with:
-          java-version: '11'
-          distribution: 'temurin'
-          architecture: x64
-
-      - uses: pmd/pmd-github-action@v1
-        with:
-          rulesets: 'ruleset.xml'ml
+      - uses: sfdx-actions/setup-pmd@v1
+      - name: run-pmd
+        run: pmd -d ./force-app/main/default/classes -R category/apex/design.xml -f text
