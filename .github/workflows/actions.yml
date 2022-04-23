@@ -3,7 +3,8 @@ name: PMD Static Code Analyzer
 jobs:
   runs-on: ubuntu-latest
 steps:
-  - uses: actions/setup-java@v2
+- name: PMD setup 
+  uses: actions/setup-java@v2
     with:
       java-version: '11'
       distribution: 'temurin'
