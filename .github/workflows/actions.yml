@@ -1,10 +1,8 @@
-name: PMD Static Code Analyzer
 on: push
+name: PMD Static Code Analyzer
 
 jobs:
-  PMD-Static-Code:
-    #name: Hello world action
-    runs-on: ubuntu-latest
+  runs-on: ubuntu-latest
 steps:
   - uses: actions/setup-java@v2
     with:
