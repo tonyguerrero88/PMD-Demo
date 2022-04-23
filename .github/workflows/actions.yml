@@ -1,6 +1,6 @@
 name: PMD Source Code Analyzer on Push
 
-on: [push]
+on: [pull_request]
 
 jobs:
   pmd:
