@@ -1,6 +1,5 @@
 on: push
 name: PMD Static Code Analyzer
-
 jobs:
   runs-on: ubuntu-latest
 steps:
