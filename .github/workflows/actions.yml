@@ -1,0 +1,20 @@
+name: PMD Source Code Analyzer on Push
+
+on: [pull_request]
+
+jobs:
+  pmd:
+  
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Setup JRE
+        uses: actions/setup-java@v1
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          architecture: x64
+
+      - uses: pmd/pmd-github-action@v1
+        with:
+          rulesets: 'ruleset.xml'ml
