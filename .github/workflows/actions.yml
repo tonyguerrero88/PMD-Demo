@@ -1,8 +1,9 @@
 on: push
 name: PMD Static Code Analyzer
 jobs:
-  runs-on: ubuntu-latest
-steps:
+  build:
+    runs-on: ubuntu-latest
+  steps:
 - name: PMD setup 
   uses: actions/setup-java@v2
   with:
