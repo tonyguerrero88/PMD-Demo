@@ -5,7 +5,7 @@ jobs:
 steps:
 - name: PMD setup 
   uses: actions/setup-java@v2
-    with:
+  with:
       java-version: '11'
       java-package: jre
       distribution: 'temurin'
