@@ -1,0 +1,14 @@
+name: PMD Static Code Analyzer
+on: push
+jobs:
+  PMD-GITHUB-Actions:
+    name: PMD Check
+    runs-on: ubuntu-latest
+    steps:
+    - uses: uses:actions/setup-java@v2
+      with:
+        java-version: "11"
+        distribution: "temurin"
+    - uses: pmd/pmd-github-action@v1
+      with:
+        rulesets: "ruleset.xml"
