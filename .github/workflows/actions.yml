@@ -1,15 +1,14 @@
 on: push
 name: PMD Static Code Analyzer
 jobs:
-  build:
-    runs-on: ubuntu-latest
-  steps:
+  runs-on: ubuntu-latest
+steps:
 - name: PMD setup 
   uses: actions/setup-java@v2
   with:
-      java-version: '11'
-      java-package: jre
-      distribution: 'temurin'
-  - uses: pmd/pmd-github-action@v1
-    with:
-      rulesets: 'ruleset.xml'
+    java-version: '11'
+    java-package: jre
+    distribution: 'temurin'
+- uses: pmd/pmd-github-action@v1
+  with:
+    rulesets: 'ruleset.xml'
