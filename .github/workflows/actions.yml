@@ -11,4 +11,4 @@ jobs:
         distribution: "temurin"
     - uses: pmd/pmd-github-action@v1
       with:
-        rulesets: ./.github/workflows/ruleset.xml
+        rulesets: ruleset.xml
