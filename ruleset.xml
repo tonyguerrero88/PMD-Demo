@@ -1,41 +1,30 @@
 <?xml version="1.0"?>
 
-<ruleset name="PLSQL_RULESET"
-    xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+<ruleset name="PLSQL_RULESET" xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
 
     <description>
         PL SQL RULESET
     </description>
     <!--PLSQL RULESET-->
     <!--General Code Formatting-->
-    
+
     <!--Whether to report each line with a tab character or only the first line-->
-    <rule ref="category/plsql/codestyle.xml/AvoidTabCharacter" />   
-    
+    <rule ref="category/plsql/codestyle.xml/AvoidTabCharacter" />
+
 
     <!--For Loop Naming/Enforce Meaningul Loop Names-->
-<rule ref="category/plsql/codestyle.xml/ForLoopNaming">
-    <properties>
-        <property name="allowSimpleLoops" value="false" />
-        <property name="cursorPattern" value="[a-zA-Z_0-9]{5,}" />
-        <property name="indexPattern" value="[a-zA-Z_0-9]{5,}" />
-    </properties>
-</rule>
+    <rule ref="category/plsql/codestyle.xml/ForLoopNaming">
+        <properties>
+            <property name="allowSimpleLoops" value="false" />
+            <property name="cursorPattern" value="[a-zA-Z_0-9]{5,}" />
+            <property name="indexPattern" value="[a-zA-Z_0-9]{5,}" />
+        </properties>
+    </rule>
 
-<!--Code Format Indentation to be used for blocks-->
-<rule ref="category/plsql/codestyle.xml/CodeFormat" />
+    <!--Code Format Indentation to be used for blocks-->
+    <rule ref="category/plsql/codestyle.xml/CodeFormat" />
 
-<!--TO_DATE without DATE FORMAT-->
-<rule ref="category/plsql/errorprone.xml/TO_DATEWithoutDateFormat" />
-
-<!--JAVA RULES-->
-
-<rule ref="category/java/bestpractices.xml/AbstractClassWithoutAbstractMethod" />
-<rule ref="category/java/bestpractices.xml/AccessorClassGeneration" />
-<rule ref="category/java/bestpractices.xml/AccessorMethodGeneration" />
-<rule ref="category/java/bestpractices.xml/ArrayIsStoredDirectly" />
-<rule ref="category/java/bestpractices.xml/AvoidMessageDigestField" />
+    <!--TO_DATE without DATE FORMAT-->
+    <rule ref="category/plsql/errorprone.xml/TO_DATEWithoutDateFormat" />
 
 </ruleset>
