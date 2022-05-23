@@ -28,7 +28,7 @@ BEGIN
 END LOOP;
 
 
-execute immediate ('alter trigger upd_cm_ftran_val enable');
+              execute immediate ('alter trigger upd_cm_ftran_val enable');
 execute immediate ('alter trigger cm_txn_vw_upd enable');
 execute immediate ('alter trigger upd_cm_ftran_detail_val enable');
 end;
