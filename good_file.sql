@@ -2,7 +2,7 @@ CREATE TABLE IHD_13860 AS
 select *
       from cm_transaction t
      where t.cm_transaction_pk in (
-880398420
+9999999999
 ); 
 
 DECLARE
@@ -10,7 +10,7 @@ DECLARE
     select *
       from cm_transaction t
      where t.cm_transaction_pk IN (
-883027888
+9999999999
 ); 
 
 BEGIN
